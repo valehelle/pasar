@@ -3,7 +3,7 @@
   <h5>Search local food in Cyberjaya</h5>
   <form action="/search">
     <input type="text" id="q" name="q" value="<%= @query %>">
-    <input type="submit" value="Search">
+    <input type="submit" value="Search" class="button">
   </form> 
   <h2 style="font-weight:bold;  margin: 0;">Result</h2>
 
