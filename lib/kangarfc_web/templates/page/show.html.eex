@@ -1,0 +1,63 @@
+
+ <div>
+ <style>
+ .card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-top:10px;
+  margin-bottom:50px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.content {
+  padding: 2px 16px;
+}
+ </style>
+
+<div style="padding-top:50px; color: #606c76;">
+  <h1 style="font-weight:bold;  margin: 0;">Pasar Malam</h1>
+</div>
+  <h3 style="margin-top: 20px; margin-bottom:10px; font-weight:bold; color: #606c76;"><%= @post.name %></h3>
+  <div class="card">
+    <img height="200" style="object-fit: cover; width:100%; border-radius: 5px 5px 0 0;" src="<%= @post.image %>" alt="Flowers in Chania">
+    <div class="content" style="color: #606c76;">
+      <h4 style="margin:0; border-bottom: 1px solid #606c76">Menu</h4>
+      <h5 style="
+        margin-top:5px;
+        margin-bottom:5px;
+      "><%= raw text_to_html(@post.menu) |> safe_to_string  %></h5>
+      
+      <h4 style="margin:0; border-bottom: 1px solid #606c76">Delivery Area</h4>
+      <h5 style="
+        margin-top:5px;
+        margin-bottom:5px;
+      "><%= raw text_to_html(@post.delivery_area) |> safe_to_string  %></h5>
+      
+      <h4 style="margin:0; border-bottom: 1px solid #606c76">Delivery Time</h4>
+      <h5 style="
+        margin-top:5px;
+        margin-bottom:5px;
+      "><%= raw text_to_html(@post.delivery_time) |> safe_to_string  %></h5>
+
+      <h4 style="margin:0; border-bottom: 1px solid #606c76">Delivery Time</h4>
+      <h5 style="
+        margin-top:5px;
+        margin-bottom:5px;
+      "><%= raw text_to_html(@post.delivery_time) |> safe_to_string  %></h5>
+      <h4 style="margin:0; border-bottom: 1px solid #606c76">Extra Info</h4>
+      <h5 style="
+        margin-top:5px;
+        margin-bottom:5px;
+      "><%= raw text_to_html(@post.extra_info) |> safe_to_string  %></h5>
+      <a href = "https://wa.me/+60175611996" class="button" style="background-color:#43e460; border-color: #43e460; background-image: linear-gradient(#43e460, #1ac33d)">Contact on  Whatsapp</a>
+    </div>
+  </div>
+</div>

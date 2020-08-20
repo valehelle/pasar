@@ -1,0 +1,53 @@
+
+<div style="padding-top:100px; color: #606c76;">
+  <h1 style="font-weight:bold;  margin: 0;">Pasar Malam</h1>
+  <h5>Search local food in Cyberjaya</h5>
+  <form action="/search">
+    <input type="text" id="q" name="q">
+    <input type="submit" value="Search">
+  </form> 
+
+  <h2 style="font-weight:bold;  margin: 0;">Latest</h2>
+</div>
+
+ <div>
+ <style>
+ .card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-top:10px;
+  margin-bottom:10px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.content {
+  padding: 2px 16px;
+}
+ </style>
+ <%= for post <- @posts do %>
+  <div class="card">
+    <img height="200" style="object-fit: cover; width:100%; border-radius: 5px 5px 0 0;" src="<%= post.image %>" alt="Makanan">
+    <div class="content" style="color: #606c76;">
+      <h3 style="margin-top: 20px; margin-bottom:10px; font-weight:bold;"><%= post.name %></h3>
+      <h4 style="margin:0">Menu</h4>
+      <h5 style="
+       display: block;/* or inline-block */
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-height: 3.6em;
+        line-height: 1.8em;
+        margin-bottom:5px;
+      "><%= raw text_to_html(post.menu) |> safe_to_string  %></h5>
+        <a href="<%= Routes.page_path(@conn, :show, post.id) %>" style="padding-top:10px; padding-bottom:10px"><span style="font-weight:bold;font-size:12px;" >MORE INFO</span></a>
+    </div>
+  </div>
+<% end %>
+</div>
