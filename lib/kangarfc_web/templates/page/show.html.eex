@@ -41,11 +41,6 @@
         margin-bottom:5px;
       "><%= raw text_to_html(@post.delivery_area) |> safe_to_string  %></h5>
       
-      <h4 style="margin:0; border-bottom: 1px solid #606c76">Delivery Time</h4>
-      <h5 style="
-        margin-top:5px;
-        margin-bottom:5px;
-      "><%= raw text_to_html(@post.delivery_time) |> safe_to_string  %></h5>
 
       <h4 style="margin:0; border-bottom: 1px solid #606c76">Delivery Time</h4>
       <h5 style="
