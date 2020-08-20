@@ -4,7 +4,7 @@
   <h5>Search local food in Cyberjaya</h5>
   <form action="/search">
     <input type="text" id="q" name="q">
-    <input type="submit" value="Search" class="button">
+    <button type="submit" value="Search" class="">Search</button>
   </form> 
 
   <h2 style="font-weight:bold;  margin: 0;">Latest</h2>
