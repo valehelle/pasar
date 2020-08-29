@@ -21,6 +21,7 @@ defmodule KangarfcWeb.Router do
     get "/search", PageController, :search
     get "/ads/new", PageController, :new
     post "/ads/new", PageController, :create
+    get "/admin/ads", PageController, :admin
   end
 
   # Other scopes may use custom stacks.

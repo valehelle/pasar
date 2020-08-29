@@ -31,4 +31,9 @@ defmodule KangarfcWeb.PageController do
       {:error, changeset } -> render(conn, "new.html", changeset: changeset)
     end
   end
+
+  def admin(conn, _params) do
+    posts = Ads.list_posts()
+    render(conn, "index.html", posts: posts)
+  end
 end

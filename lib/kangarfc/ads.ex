@@ -18,14 +18,15 @@ defmodule Kangarfc.Ads do
 
   """
   def list_posts do
-    Repo.all(Post)
+    Post |> order_by(desc: :id) |> Repo.all
   end
 
   def find_post(search_query) do
     search_query = "%(#{String.upcase(search_query)})%"
     query = from p in Post,
       where: fragment("? SIMILAR TO ?", fragment("upper(?)", p.menu), ^search_query),
-      or_where: fragment("? SIMILAR TO ?", fragment("upper(?)", p.name), ^search_query)
+      or_where: fragment("? SIMILAR TO ?", fragment("upper(?)", p.name), ^search_query),
+      order_by: [desc: p.id]
 
     Repo.all(query)
   end
