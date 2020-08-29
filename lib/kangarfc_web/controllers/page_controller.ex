@@ -10,7 +10,7 @@ defmodule KangarfcWeb.PageController do
 
   def show(conn, %{"post_id" => post_id}) do
     post = Ads.get_post!(post_id)
-  render(conn, "show.html", post: post)
+    render(conn, "show.html", post: post)
   end
 
   def search(conn,  %{"q" => query}) do
@@ -27,7 +27,7 @@ defmodule KangarfcWeb.PageController do
   
   def create(conn, %{"post" => params}) do
     case Ads.create_post(params) do
-      {:ok, _} -> redirect(conn, to: Routes.page_path(conn, :index))
+      {:ok, post} -> redirect(conn, to: Routes.page_path(conn, :show, post.id))
       {:error, changeset } -> render(conn, "new.html", changeset: changeset)
     end
   end
