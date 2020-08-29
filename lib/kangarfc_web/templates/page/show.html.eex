@@ -23,7 +23,11 @@
  </style>
 
 <div style="padding-top:50px; color: #606c76;">
-  <h1 style="font-weight:bold;  margin: 0;">Bazzar Bear</h1>
+  <a href="/" style="text-decoration: none;color: inherit;">
+  <h1 style="font-weight:bold;  margin: 0;">
+    <span style="color:#f44336;">Bazzar</span> <span style="color:#795548;">Bear</span>
+  </h1>
+  </a>
 </div>
   <h3 style="margin-top: 20px; margin-bottom:10px; font-weight:bold; color: #606c76;"><%= @post.name %></h3>
   <div class="card">
@@ -52,7 +56,7 @@
         margin-top:5px;
         margin-bottom:5px;
       "><%= raw text_to_html(@post.extra_info) |> safe_to_string  %></h5>
-      <a href = "https://wa.me/+60175611996" class="button" style="background-color:#43e460; border-color: #43e460; background-image: linear-gradient(#43e460, #1ac33d)">Contact on  Whatsapp</a>
+      <a href = "https://wa.me/+<%= @post.contact_info %>" class="button" style="background-color:#43e460; border-color: #43e460; background-image: linear-gradient(#43e460, #1ac33d)">Contact on  Whatsapp</a>
     </div>
   </div>
 </div>
