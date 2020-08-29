@@ -31,7 +31,7 @@
 </div>
   <h3 style="margin-top: 20px; margin-bottom:10px; font-weight:bold; color: #606c76;"><%= @post.name %></h3>
   <div class="card">
-    <img style="object-fit: cover; width:100%; border-radius: 5px 5px 0 0;" src="<%= @post.image %>" alt="Flowers in Chania">
+    <img style="background-color: lightgrey; max-height: 800px; object-fit: contain; width:100%; border-radius: 5px 5px 0 0;" src="<%= @post.image %>" alt="Flowers in Chania">
     <div class="content" style="color: #606c76;">
       <h4 style="margin:0; border-bottom: 1px solid #606c76">Menu</h4>
       <h5 style="
