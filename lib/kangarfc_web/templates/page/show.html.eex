@@ -22,6 +22,20 @@
 }
  </style>
 
+ <script>
+  function redirect(url, id){
+    gtag('event', 'whatsapp', 
+    {
+      'ads_id': id,
+      'event_callback': function() {
+        window.location = url
+    }
+
+    });
+
+  }
+ </script>
+
 <div style="padding-top:50px; color: #606c76;">
   <a href="/" style="text-decoration: none;color: inherit;">
   <h1 style="font-weight:bold;  margin: 0;">
@@ -56,7 +70,7 @@
         margin-top:5px;
         margin-bottom:5px;
       "><%= raw text_to_html(@post.extra_info) |> safe_to_string  %></h5>
-      <a href = "https://wa.me/+<%= @post.contact_info %>" class="button" style="background-color:#43e460; border-color: #43e460; background-image: linear-gradient(#43e460, #1ac33d)">Contact on  Whatsapp</a>
+      <div onclick="redirect(`https://wa.me/+<%= @post.contact_info %>`, `<%= @post.id %>`)" class="button" style="background-color:#43e460; border-color: #43e460; background-image: linear-gradient(#43e460, #1ac33d)">Contact on  Whatsapp</div>
     </div>
   </div>
 </div>
