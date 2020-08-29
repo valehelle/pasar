@@ -34,7 +34,7 @@
  </style>
  <%= for post <- @posts do %>
   <div class="card">
-    <img height="200" style="object-fit: cover; width:100%; border-radius: 5px 5px 0 0;" src="<%= post.image %>" alt="Makanan">
+    <img style="background-color: lightgrey; max-height: 500px; object-fit: contain; width:100%; border-radius: 5px 5px 0 0;" src="<%= post.image %>" alt="<%= post.name %>">
     <div class="content" style="color: #606c76;">
       <h3 style="margin-top: 20px; margin-bottom:10px; font-weight:bold;"><%= post.name %></h3>
       <h4 style="margin:0">Menu</h4>

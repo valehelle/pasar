@@ -31,27 +31,27 @@
 </div>
   <h3 style="margin-top: 20px; margin-bottom:10px; font-weight:bold; color: #606c76;"><%= @post.name %></h3>
   <div class="card">
-    <img style="background-color: lightgrey; max-height: 800px; object-fit: contain; width:100%; border-radius: 5px 5px 0 0;" src="<%= @post.image %>" alt="Flowers in Chania">
-    <div class="content" style="color: #606c76;">
-      <h4 style="margin:0; border-bottom: 1px solid #606c76">Menu</h4>
+    <img style="background-color: lightgrey; max-height: 800px; object-fit: contain; width:100%; border-radius: 5px 5px 0 0;" src="<%= @post.image %>" alt="<%= @post.name %>">
+    <div class="content" style="color: #606c76; padding-top:20px;">
+      <h4 style="margin:0; border-bottom: 1px solid #606c76; font-weight: bold;">Menu</h4>
       <h5 style="
         margin-top:5px;
         margin-bottom:5px;
       "><%= raw text_to_html(@post.menu) |> safe_to_string  %></h5>
       
-      <h4 style="margin:0; border-bottom: 1px solid #606c76">Delivery Area</h4>
+      <h4 style="margin:0; border-bottom: 1px solid #606c76; font-weight: bold;">Delivery Area</h4>
       <h5 style="
         margin-top:5px;
         margin-bottom:5px;
       "><%= raw text_to_html(@post.delivery_area) |> safe_to_string  %></h5>
       
 
-      <h4 style="margin:0; border-bottom: 1px solid #606c76">Delivery Time</h4>
+      <h4 style="margin:0; border-bottom: 1px solid #606c76; font-weight: bold;">Delivery Time</h4>
       <h5 style="
         margin-top:5px;
         margin-bottom:5px;
       "><%= raw text_to_html(@post.delivery_time) |> safe_to_string  %></h5>
-      <h4 style="margin:0; border-bottom: 1px solid #606c76">Extra Info</h4>
+      <h4 style="margin:0; border-bottom: 1px solid #606c76; font-weight: bold;">Extra Info</h4>
       <h5 style="
         margin-top:5px;
         margin-bottom:5px;
