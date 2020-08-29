@@ -5,7 +5,7 @@ defmodule KangarfcWeb.PageController do
 
   def index(conn, _params) do
     posts = Ads.list_posts()
-    render(conn, "index.html", posts: posts)
+    render(conn, "landing.html", posts: posts)
   end
 
   def show(conn, %{"post_id" => post_id}) do

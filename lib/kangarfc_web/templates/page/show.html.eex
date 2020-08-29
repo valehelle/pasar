@@ -23,7 +23,7 @@
  </style>
 
 <div style="padding-top:50px; color: #606c76;">
-  <h1 style="font-weight:bold;  margin: 0;">Pasar Malam</h1>
+  <h1 style="font-weight:bold;  margin: 0;">Bazzar Bear</h1>
 </div>
   <h3 style="margin-top: 20px; margin-bottom:10px; font-weight:bold; color: #606c76;"><%= @post.name %></h3>
   <div class="card">

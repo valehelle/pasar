@@ -1,6 +1,6 @@
 
 <div style="padding-top:100px; color: #606c76;">
-  <h1 style="font-weight:bold;  margin: 0;">Pasar Malam</h1>
+  <h1 style="font-weight:bold;  margin: 0;">Bazzar Bear</h1>
   <h5>Search local food in Cyberjaya</h5>
   <form action="/search">
     <input type="text" id="q" name="q">
