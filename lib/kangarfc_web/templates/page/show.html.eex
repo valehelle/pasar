@@ -11,9 +11,12 @@
   padding-bottom: 10px;
 
 }
-
+.whatsapp-button {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
 /* On mouse-over, add a deeper shadow */
-.card:hover {
+.whatsapp-button:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
@@ -70,7 +73,7 @@
         margin-top:5px;
         margin-bottom:5px;
       "><%= raw text_to_html(@post.extra_info) |> safe_to_string  %></h5>
-      <div onclick="redirect(`https://wa.me/+<%= @post.contact_info %>`, `<%= @post.id %>`)" class="button" style="background-color:#43e460; border-color: #43e460; background-image: linear-gradient(#43e460, #1ac33d)">Contact on  Whatsapp</div>
+      <div onclick="redirect(`https://wa.me/+<%= @post.contact_info %>`, `<%= @post.id %>`)" class="button whatsapp-button" style="background-color:#43e460; border-color: #43e460; background-image: linear-gradient(#43e460, #1ac33d)">Contact on  Whatsapp</div>
     </div>
   </div>
 </div>

@@ -46,16 +46,17 @@
   <div class="card" onclick="navigate('<%= Routes.page_path(@conn, :show, post.id) %>')">
   <img style="background-color: lightgrey; max-height: 500px; object-fit: contain; width:100%; border-radius: 5px 5px 0 0;" src="<%= post.image %>" alt="<%= post.name %>">
     <div class="content" style="color: #606c76;">
-      <h2 style="margin-top: 5px; margin-bottom:10px; font-weight:bold;"><%= post.name %></h2>
+      <h3 style="margin-top: 5px; margin-bottom:10px; font-weight:bold;"><%= post.name %></h3>
       <h4 style="margin:0; font-weight: bold; border-bottom: 1px solid #606c76;">Menu</h4>
       <h5 style="
        display: block;/* or inline-block */
         text-overflow: ellipsis;
         word-wrap: break-word;
         overflow: hidden;
-        max-height: 3.6em;
+        max-height: 6.6em;
         line-height: 1.8em;
         margin-bottom:5px;
+        margin-top: 5px;
       "><%= raw text_to_html(post.menu) |> safe_to_string  %></h5>
     </div>
     <div style="margin-top: 10px; padding-left: 16px; padding-top: 10px; border-top: 1px solid lightgrey;">
