@@ -23,6 +23,8 @@
 .content {
   padding: 2px 16px;
 }
+
+
  </style>
 
  <script>
@@ -54,12 +56,16 @@
       <h5 style="
         margin-top:5px;
         margin-bottom:5px;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
       "><%= raw text_to_html(@post.menu) |> safe_to_string  %></h5>
       
       <h4 style="margin:0; border-bottom: 1px solid #606c76; font-weight: bold;">Delivery Area</h4>
       <h5 style="
         margin-top:5px;
         margin-bottom:5px;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
       "><%= raw text_to_html(@post.delivery_area) |> safe_to_string  %></h5>
       
 
@@ -67,13 +73,19 @@
       <h5 style="
         margin-top:5px;
         margin-bottom:5px;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
       "><%= raw text_to_html(@post.delivery_time) |> safe_to_string  %></h5>
       <h4 style="margin:0; border-bottom: 1px solid #606c76; font-weight: bold;">Extra Info</h4>
       <h5 style="
         margin-top:5px;
         margin-bottom:5px;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
       "><%= raw text_to_html(@post.extra_info) |> safe_to_string  %></h5>
-      <div onclick="redirect(`https://wa.me/+<%= @post.contact_info %>`, `<%= @post.id %>`)" class="button whatsapp-button" style="background-color:#43e460; border-color: #43e460; background-image: linear-gradient(#43e460, #1ac33d)">Contact on  Whatsapp</div>
+      <div onclick="redirect(`https://wa.me/+<%= @post.contact_info %>`, `<%= @post.id %>`)" class="button whatsapp-button" style="display:flex;background-color:#43e460; border-color: #43e460; background-image: linear-gradient(#43e460, #1ac33d)">
+        <span style="text-align:center; width:100%">Contact on  Whatsapp</span>
+      </div>
     </div>
   </div>
 </div>
