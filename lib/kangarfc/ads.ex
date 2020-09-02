@@ -20,6 +20,9 @@ defmodule Kangarfc.Ads do
   def list_posts do
     Post |> order_by(desc: :id) |> Repo.all
   end
+  def list_posts_latest do
+    Post |> order_by(desc: :id) |> limit(5) |> Repo.all
+  end
 
   def find_post(search_query) do
     search_query = "%(#{String.upcase(search_query)})%"

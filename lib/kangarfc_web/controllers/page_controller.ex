@@ -4,7 +4,7 @@ defmodule KangarfcWeb.PageController do
   alias Kangarfc.Ads.Post
 
   def index(conn, _params) do
-    posts = Ads.list_posts()
+    posts = Ads.list_posts_latest()
     render(conn, "landing.html", posts: posts)
   end
 
@@ -33,7 +33,7 @@ defmodule KangarfcWeb.PageController do
   end
 
   def admin(conn, _params) do
-    posts = Ads.list_posts()
+    posts = Ads.list_posts_latest()
     render(conn, "index.html", posts: posts)
   end
 end

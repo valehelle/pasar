@@ -38,6 +38,14 @@
     window.location = url
   }
  </script>
+<%= if length(@posts) == 0  do %>
+  <div style = "margin-top: 30px; height: 30vh; color:#606c76;">
+    <h2 style="margin-bottom:0; ">Oh gosh this is embarrasing :(</h2>
+    <h4 style="margin-bottom:0; margin-top:10px;">It looks like we are unable to find the product that you are looking for.</h4>
+    <h4>Tell us the product you are looking for in our Facebook page and we will inform you went we found one!</h4>
+  </div>
+<% end %>
+
 <%= for post <- @posts do %>
   <div class="card" onclick="navigate('<%= Routes.page_path(@conn, :show, post.id) %>')">
   <img style="background-color: lightgrey; max-height: 500px; object-fit: contain; width:100%; border-radius: 5px 5px 0 0;" src="<%= post.image %>" alt="<%= post.name %>">
