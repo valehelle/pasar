@@ -34,6 +34,7 @@
       }
       </style>
       <div style="display:flex; justify-content: center; margin-top: 80px; flex-direction: column;">
+      <h6 style="margin:0; color: #606c76 ">Have any question?</h6>
       <a href = "http://m.me/BazzarBearMY" class="button facebook-button" style="background-color:#4267b2;">Contact us on Facebook</a>
       </div>
     </main>

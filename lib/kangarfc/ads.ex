@@ -21,7 +21,7 @@ defmodule Kangarfc.Ads do
     Post |> order_by(desc: :id) |> Repo.all
   end
   def list_posts_latest do
-    Post |> order_by(desc: :id) |> limit(5) |> Repo.all
+    Post |> order_by(desc: :id) |> limit(10) |> Repo.all
   end
 
   def find_post(search_query) do
